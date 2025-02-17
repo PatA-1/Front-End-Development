@@ -1,0 +1,134 @@
+<!--Html5 document structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/0f75d19201.js" crossorigin="anonymous"></script>
+    
+    <!-- CSS link - Styling-->
+    <link rel="stylesheet" href="Css/style.css">
+    <!-- //CSS Link - Styling-->
+
+    <!-- Bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--//Bootstrap-->
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- //Font-->
+    <title>Newsletter</title>
+    
+    
+</head>
+<body>
+   <header>
+    <!--Navigation Bar-->
+
+        <div class="SignUpLogo">
+            <h1 class="Logo-Text">The Tech Lo</h1>
+            <h1 class="Logo-TextSmall">The Tech Loop</h1>
+            <img src="Images/unnamed.png" alt="Logo" class="LogoImage">
+            <h1 class="Logo-TextP">p</h1>
+        </div>  
+
+
+        <!-- Font Awesome Nav bar icon -->
+        <!--Hamburger icon-->
+        <i class="fa fa-bars menu-toggle"></i>
+        <!--Navigation Menu-->
+        <ul class="NavMenu">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Recent.html">Posts</a></li>
+            <li><a href="Technology.html">Tech</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
+            <li><a href="Science.html">Science</a></li>
+            <li><a href="AI.html">AI</a></li>
+
+            <li>
+                <a href="#">More 
+                <i class="fa fa-chevron-down" style="font-size: 0.5em;"></i>
+                </a>
+                <ul class="DropMenu">
+                    <li><a href="Entertainment.html">Entertainment</a></li>
+                    <li><a href="SignUp.html">Newsletter</a></li>
+                </ul>
+            </li>   
+        </ul>
+
+   </header> 
+
+   <section class="">
+        <div class="px-4 py-5 px-md-5 text-center text-lg-center" style="background: hsl(31, 63%, 52%);">
+            <div class="container">
+                <div class="row gx-lg-5 align-items-center">
+                    <div class="col-lg-6 mb-lg-0">
+                        <h2 class="my-5 display-3 fw-bold ls-tight" style="color: hsl(221, 71%, 17%); font-family: Roboto;">
+                            Your Endless Loop of Tech Insights
+                        </h2>
+                        <p style="color: hsl(216, 20%, 49%);"> Subscribe To Our Newsletter</p>
+                    </div>
+                    <!--Sign Up Card Section-->
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="card">
+                            <div class="card-body py-5 px-md-5">
+                                <div class="container mt-5">
+                                    <form id="SignUp-Form">
+                                        <div class="mb-3">
+                                            <!--Users are required to input their name-->
+                                            <label for="name" class="form-label">Name </label>
+                                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <!--Users are required to input their email-->
+                                            <label for="email" class="form-label">Email </label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                        </div>
+                                        <!--Sign up button -->
+                                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                                    </form>
+                                </div>
+                            
+                                <!-- Modal -->
+                                <div class="modal fade" id="SignUpModal"  aria-labelledby="SignUpModalLabel" aria-hidden="true">
+                                   <!--Popup displayed if the registration is successful-->
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <!--Popup header-->
+                                                <h5 class="modal-title" id="SignUpModalLabel">Success</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <!--Popup text-->
+                                            <div class="modal-body">
+                                                You have now been added to our mailing list!
+                                            </div>
+                                            <!--Button to close the popup-->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+
+ 
+   <!--JQuery-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+   <!--Script-->
+   <script src="Scripts.js"></script>
+
+</body>
+</html>

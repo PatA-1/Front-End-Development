@@ -1,0 +1,762 @@
+*{
+    box-sizing: border-box;
+}
+/*General*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif  ;
+    margin: 5px;   
+}
+p, li{
+    font-weight: 300;
+}
+h6{
+    font-style:italic ;
+}
+a{
+    color: inherit;
+    text-decoration: none;  
+}
+a:link, a:visited {
+    color: inherit;
+    text-decoration: none;  
+}
+.Clearfix::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+.btn{  
+    background: #025f98;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #ffffff;
+    font-size: 1.1em;
+    padding: .5rem 1rem;
+}
+.btn-lg{
+    line-height: 1.2rem;
+    padding: .8rem, 1.2rem;
+}
+.btn:hover{
+    background: #00304e;
+    color: #ffffff !important;
+}
+
+.InputText{
+    border: 1px solid #025e9875;
+    border-radius: 5px;
+    color: #282727;
+    display: block;
+    font-size: 1.1em;
+    line-height: 1.5rem;
+    outline: none;
+    padding: .6rem .8rem;
+    width: 100%;
+}
+
+/*End General*/
+html, 
+body {
+    background: #ffffff;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+}
+/*Top of the screen*/
+header {
+background: #00304e;
+height: 66px;
+}
+/*Website name at the top of the screen*/
+header .Logo {
+float: left;
+color: #ffffff ;
+height: inherit;
+margin-left: 8px;
+}
+/*Logo  in between the website name text at the top of the screen*/
+header .LogoImage{
+    float: right;
+    height: 40%;
+    margin-right: -22px;
+    margin-top: -42px;
+    width: 13%;
+}
+/*The logo that will be displayed if the screen becomes smaller*/
+header .Logo-TextSmall{
+    display: none;
+}
+/*The logo at the top of the screen (Nav bar)*/
+header .Logo-Text{
+    margin: 10px;
+    text-shadow:  1px 0px 10px orange;
+}
+/*The logo at the top of the screen (Nav bar)*/
+header .Logo-TextP{
+   float: right;
+   margin-right: -46px;
+   margin-top: -55px;
+   text-shadow:  1px 0px 10px orange;
+}
+/*The design of the logo at the top of the screen (Nav bar) in the sign up page*/
+header .SignUpLogo {
+    float: left;
+    color: #ffffff ;
+    height: inherit;
+    margin-left: 8px;
+}
+/*The design of the logo at the top of the screen (Nav bar) in the sign up page*/
+header .SignUpLogo .LogoImage{
+    float: right;
+    height: 40%;
+    margin-right: -22px;
+    margin-top: -41px;
+    width: 12%;
+}
+header .SignUpLogo .Logo-TextSmall{
+    display: none;
+}
+header .SignUpLogo .Logo-Text{
+    margin: 10px;
+    text-shadow:  1px 0px 10px orange;
+
+}
+header .SignUpLogo .Logo-TextP{
+   float: right;
+   margin-right: -48px;
+   margin-top: -55px;
+   text-shadow:  1px 0px 10px orange;
+}
+/*The catchphrase displayed under the nav bar*/
+body .Catchphrase{
+    color: #333333 ;
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif  ;
+    text-align: center;
+}
+.SmallScreen{
+    display: none;
+}
+/*Layout for the options displayed in the nav bar*/
+header ul{
+    float: right; 
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    
+}
+header ul li{
+    float: left;
+    position: relative;
+}
+
+
+/*Banner Nav Bar*/
+header ul li a{
+    color: #ffffff;
+    display: block;
+    font-size: 1em;
+    padding: 15px;   
+    padding-top: 20px;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+/* Sub menu background*/
+header ul li ul{
+    
+    background: solid #ffffffb2;
+    border:3px solid #00304e;
+    display: none;
+    position: fixed;
+    right: 0px;
+    top: 90px;
+    width:100%; 
+}
+/*For the dropdown menu*/
+.MoreButton{
+    padding-top: 8px;
+    
+}
+/*Dropdown menu*/
+header ul li ul li{
+    width: 100%;
+}
+/*Dropdown menu options*/
+header ul li ul li a{
+    padding: 10px;
+    margin-left: 30px;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #00304e;
+}
+
+/* Sub menu dispayed when more is clicked */
+header ul li:focus-within > ul,
+header ul li:hover ul{    
+    background: #ffffff;
+    box-shadow: 1rem 1rem 1rem -1rem;
+    display: block;
+    height: 70%;
+    z-index: 1000;
+}
+
+/*Sub menu clicking on anchor tags*/
+header ul li ul li a:hover{
+    background: #dcdcdc; 
+}
+/*Colour of the text in the nav bar*/
+header .NavMenu a{
+    color: #ffffff;
+}
+/*Colour of the text in the dropdown menu*/
+header .DropMenu a{
+    color: #00304e !important;
+
+}
+/*Background of the options in the nav bar changes when hovered on*/
+header ul li a:hover{
+    background: #025f98;
+    transition: .8s;
+}
+/*Hamburger menu iocn displayed when the screen is minimised - responsive*/
+header .menu-toggle {
+    display: none;
+}
+
+/*Pushes footer to the bottom of the page*/
+.PageWrapper {
+    min-height: 100%;
+}
+.PostWrap a:hover{
+    color:#025f98
+}
+
+/* Carousel */
+.Carousel{
+    position: relative;
+}
+/*Title of the 'Trending Posts' carousel*/
+.Carousel .CarouselTitle {   
+    color: #282727;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    margin: 30px auto;
+    text-align: center;
+}
+/*Right arrow on carousel*/
+.Carousel .Next{
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    font-size: 2em;
+    color: #282727;
+    cursor: pointer;
+}
+/*Left arrow on carousel*/
+.Carousel .Previous{
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    font-size: 2em;
+    color: #282727;
+    cursor: pointer;
+}
+/*How the posts are being displayed in order to create the carousel*/
+.Carousel .PostWrap {
+    height: 345px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+    width: 85%;
+}
+.Carousel .PostWrap .Post{
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 1rem 1rem 1rem -1rem;
+    display: inline-block;
+    height: 320px;
+    margin: 0px 10px;
+    width: 250px;
+}
+.Carousel .PostWrap .Post .CarouselImage{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 200px;
+    width: 100%;
+}
+.Carousel .PostWrap .Post .PostInfo{
+    height: 130px;
+    padding: 0px 8px;
+}
+
+
+/*Content*/
+.Content{   
+    margin: 30px auto 30px;
+    width: 90%;
+}
+.Content .RecentPost{   
+    float: left;
+    width: 70%;
+}
+/*Post 1 Styling*/
+
+.Content .RecentPost.Posts{
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 20px 50px;  
+    width: 98%;
+}
+.Content .RecentPost.Posts .PostTitle{
+    color: #333333;
+    font-size: 2em;
+    margin-bottom: 40px;
+    text-align: center;
+}
+/*//Post 1 Styling*/
+
+.Content .RecentPost .Post{
+    background:#ffffff;
+    border: 1px solid #025e9877;
+    border-radius: 5px;
+    height: 260px;
+    margin: 20px auto;
+    position: relative;
+    width: 95%;
+}
+.Content .RecentPost .Post .ReadMore{
+    background: transparent;
+    border: 2px solid #025e98aa;
+    border-radius: 0px;
+    color: #025f98 !important;
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
+}
+.Content .RecentPost .Post .ReadMore:hover{
+    background: #025f98;
+    color: #ffffff !important;
+    transition: .2s;
+}
+.Content .RecentPost .Post .PostImage{   
+    float: left;
+    height: 100%;
+    width: 40%;
+}
+.Content .RecentPost .RecentPostTitle{
+    color: #333333;
+    margin: 20px;
+}
+.Content .RecentPost .Post .PostBlurb{
+    float: right;
+    padding: 15px;
+    width: 60%;
+}
+
+/*Other*/
+
+.Content .RecentPost.Other{   
+    width: 100%;
+}
+.Content .RecentPost.Other .RecentPostTitle{
+    border-bottom: 1px solid #00304ed5;
+    font-size: 3em;
+    margin: 50px;
+}
+.Content .RecentPost.Other .Post{
+    height: auto;
+    margin: 40px;
+    width: 70%;
+}
+.Content .RecentPost.Other .Post .PostImage{   
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+.Content .RecentPost.Other .Post .PostBlurb{
+    float: left;
+    padding: 20px;
+    width: 80%;
+}
+/* //Other*/
+
+.Content .RecentPost .Post .PostBlurb a:hover{
+    color: #025f98;
+}
+.Content .Sidebar{
+    float: left;
+    width: 30%;
+}
+.Content .Sidebar.Posts{
+    padding: 0px 10px ;
+}
+.Content .Sidebar .Section{
+    background: #ffffff;
+    border-radius: 5px;    
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.Content .Sidebar .Section .SectionTitle{
+    margin: 10px 0px 10px 0px;
+}
+/*.Content .Sidebar .Section.Search{
+    color: #333333;
+    margin-top: 75px;
+}*/
+.Content .Sidebar .Section.Topic ul {
+    border-top: 1px solid #025e9857;   
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.Content .Sidebar .Section.Topic ul li a {
+    border-bottom: 1px solid #025e9857;   
+    display: block;
+    padding: 12px 0px 12px 0px;
+}    
+.Content .Sidebar .Section.Topic ul li a:hover{
+    color: #025f98;
+}
+/*Reg Page*/ 
+.RegContent{
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 20px;
+    width: 50%;
+}
+.RegContent .RegTitle{
+    color: #333333;
+    font-size: 1.8em;
+    text-align: center;
+
+}
+.RegContent form div{
+    margin-bottom: 15px;
+}
+.RegContent form p{
+    text-align: center;
+}
+.RegContent form p a{
+    color: orange;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+/*Article*/
+.ArticleText h1, h2, h3, h4, h5, h6, p, li{
+    font-family: "Roboto", serif !important ;
+    font-size: 1em !important;
+    font-weight: 400;
+    margin: 5px;   
+}
+.ArticleText h4{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+.ArticleText p, li{
+    font-weight: 300 !important;
+}
+.ArticleInfo{
+    text-align: center;
+}
+.ArticleImages{
+    text-align: center;
+}
+.ArticleImages img{
+    padding: 5px;
+    padding-bottom: 20px;
+    max-width: 100%;
+}
+/*About Page*/
+.hero-section {
+    background: #112240;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, cursive;
+    font-size: 1em;
+    padding: 100px 0;
+    text-align: center;
+}
+.section-title{
+    color: #64FFDA;
+}
+.section-para{
+    color: #ffffff;
+}
+#SignUpModal{
+    z-index: 1000;
+}
+/*Footer*/
+.Footer{
+    background: #00304e;
+    color: #ffffff;
+    height: 400px;
+    position: relative;
+}
+.Footer .FooterInfo{
+    display: flex;
+    height: 360px;
+}
+.Footer .FooterInfo .FooterSection{
+    flex: 1;
+    padding: 20px;
+}
+.Footer .FooterInfo .FooterSection.Info .LogoImage{
+    height: 40%;
+    width: 50%;
+    display: none;
+}
+.Footer .FooterInfo .FooterSection.Info .LogoText{
+    font-size: 3em;
+    padding: 15px 0px 15px 5px;
+    text-shadow:  1px 0px 10px orange;
+}
+.Footer .FooterInfo .FooterSection.Info .Catchphrase{
+    color: rgb(255, 203, 107);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, cursive;
+    font-size: .7em;
+}
+.Footer .FooterInfo .FooterSection.Info .Contacts{
+    font-size: 1em;
+    text-shadow: 1px 0px 10px orange;
+}
+.Footer .FooterInfo .FooterSection.Info .Socials a{
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 1.5em;
+    height: 50%;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-top: 5px;
+    text-align: center;
+    text-shadow: 1px 0px 10px orange;
+    transition: all .5s;
+    width: 60%;
+}
+.Footer .FooterInfo .FooterSection.Info .Socials a:hover{
+    border: 1px solid rgba(255, 166, 0, 0.845);
+    transition: all .5s;
+}
+.Footer .FooterInfo .FooterSection.Others{  
+    padding: 5px 0px 0px 10px;
+}
+.Footer .FooterInfo .FooterSection.Others .NameExtra{
+    font-size: 3em;
+    padding: 20px 0px 15px 5px;
+    text-shadow:  1px 0px 10px orange;
+}
+.Footer .FooterInfo .FooterSection.Others ul li a{
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-top: 40px;
+    transition: all .4s;
+}
+.Footer .FooterInfo .FooterSection.Others ul li a:hover{
+    color: orange;
+    margin-left: 15px;
+    transition: all .4s;
+}
+.Footer .FooterInfo .ContactBox h2{
+    padding-top: 30px;
+}
+.Footer .FooterInfo .ContactBox .Contact{
+    background: #00304e;
+    color: #ffffff;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+    padding: .6rem 1.2rem;
+}
+.Footer .FooterInfo .ContactBox .Contact:focus{
+    background: #063755;
+}
+.Footer .FooterInfo .ContactBox .SendButton{
+    float: right;
+    font-size: 1.1em;
+}
+.Footer .FooterInfo .ContactBox .SendButton:hover{
+    background: #ffffff;
+    color: #025f98 !important;
+}
+.Footer .FooterBottom{
+    background: #063755;
+    bottom: 0px;
+    color: #ffffff;
+    display: inline-block;
+    height: 40px;
+    left: 0px;
+    line-height: 40px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/*Media Querier*/
+/*Small screens scalings*/
+@media only screen and (max-width: 200px){
+    .Catchphrase{
+        display: none;
+    }
+    .PageWrapper{
+        display: none;
+    }
+    .Footer{
+        display: none;
+    }
+    .SmallScreen h1{
+        color: #800000;
+        display: block;
+        padding: 200px 0px 10px 0px ;
+    }
+        .SmallScreen h2{
+        color: #800000;
+        display: block;
+        padding: 25px 0px 10px 0px ;
+    }
+}
+@media only screen and (max-width: 440px){
+    .Content .RecentPost .Post{
+        height: auto;
+    }
+    .Content .RecentPost .Post .PostImage{   
+        width: 100%;
+    }
+    .Content .RecentPost .Post .PostBlurb{
+
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 620px){
+    .Content .RecentPost .Post .ReadMore{
+        display: block;
+        position: static;
+        text-align: center;
+        width: 100%;
+    }   
+    .Content .RecentPost{   
+        float: left;
+        padding: 10px;
+        width: 100%;
+    }
+    .Content .RecentPost .RecentPostTitle{
+        color: #333333;
+        margin: 20px;
+        text-align: center;
+    }
+    .Content .RecentPost .Post{
+        width: 100%;
+    }
+    .Content .Sidebar{
+        float: left;
+        padding: 10px;
+        width: 100%;
+    }
+    .Footer{
+        height: auto;
+    }
+    .Footer .FooterInfo{
+        flex-direction: column;
+        height: auto;
+    }
+    .Footer .FooterInfo .FooterSection{
+        flex: 1;
+        padding: 15px;
+    }
+    .Footer .FooterInfo .ContactBox {
+        padding-bottom: 100px;
+    }
+    .Footer .FooterInfo .ContactBox .SendButton{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 705px){
+    .Content{   
+        margin: 30px auto 30px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 851px) {  
+    header {
+        position: relative;
+    }
+    header .Logo-Text{
+        position: absolute;
+        left: 250px;
+        top: 5px;
+    }
+    header .SignUpLogo .Logo-TextSmall{
+        display: block;
+    }
+    header ul{
+        width: 100%;
+        background:#063755;
+        /*Menu doesn't diplay unless the button is clicked*/
+       display: none;
+    }
+    header ul.Show{
+        display: block;
+    }
+    header ul li{
+        width: 100%;
+    }
+    header ul li ul{
+        position: static;
+        width: 100%;
+        display:none;
+    }
+    header ul li:focus-within > ul,
+    header ul li:hover ul{
+        display: block;
+        background: #ffffff;
+    }
+    header .menu-toggle{
+        position: absolute;
+        display: block;
+        right: 40px;
+        top: 23px;
+        font-size: 1.5em;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    header .Logo-Text{
+        display: none;
+    }
+    header .Logo-TextP{
+        display: none;
+    }
+    header .Logo-TextSmall {
+        display: block;
+        margin: 15px;
+        text-shadow:  2px 0px 10px orange;
+    }
+    header .LogoImage{
+        display: none;
+    }
+    .Carousel .PostWrap .Post{
+
+        width: 60%;
+    }
+    .Carousel .Next{
+        right: 5px;
+    }
+    .Carousel .Previous{
+        left: 5px;
+    }
+    .Carousel .PostWrap .Post .PostInfo .far.fa-user{
+        display: none;
+    }
+    #ArticleImages img{
+        display: block;
+        padding: 10px;
+        padding-bottom: 25px;
+        text-align: center;
+        max-width: 100%;
+    }
+}    
